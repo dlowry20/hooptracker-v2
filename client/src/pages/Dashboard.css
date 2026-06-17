@@ -1,0 +1,105 @@
+.dashboard {}
+
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.player-card {
+  display: block;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.player-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.player-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.player-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #0A0A0A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.player-name {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.player-email {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.player-overall {
+  text-align: center;
+  padding: 8px 0 4px;
+}
+
+.overall-pct {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.overall-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.overall-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.no-sessions {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 8px 0;
+}
+
+.loading {
+  color: var(--text-secondary);
+  padding: 40px;
+  text-align: center;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 700px) {
+  .players-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .overall-pct {
+    font-size: 36px;
+  }
+}
+

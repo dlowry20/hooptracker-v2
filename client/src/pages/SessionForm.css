@@ -1,0 +1,245 @@
+.session-form-page {}
+
+.session-form-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 20px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .session-form-layout { grid-template-columns: 1fr; }
+
+  .session-right {
+    position: static;
+  }
+}
+
+.session-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.session-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.section-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.section-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.zones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.zone-input-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  background: var(--panel-light);
+}
+
+.zone-input-card:hover {
+  border-color: var(--text-muted);
+}
+
+.zone-input-card.active {
+  border-color: var(--accent);
+  background: rgba(212, 175, 55, 0.08);
+}
+
+.zone-input-card.has-data {
+  border-color: var(--make-green);
+  background: rgba(61, 214, 140, 0.05);
+}
+
+.zone-input-card.active.has-data {
+  border-color: var(--accent);
+}
+
+.zone-input-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.zone-badge {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #0A0A0A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.zone-input-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.zone-attempts-badge {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  margin-left: auto;
+}
+
+.zone-counters {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.zone-counter {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.12s;
+  gap: 2px;
+}
+
+.zone-counter.makes {
+  background: rgba(61, 214, 140, 0.06);
+}
+
+.zone-counter.makes:hover {
+  background: rgba(61, 214, 140, 0.14);
+}
+
+.zone-counter.makes:active {
+  background: rgba(61, 214, 140, 0.22);
+}
+
+.zone-counter.misses {
+  background: rgba(245, 101, 101, 0.06);
+}
+
+.zone-counter.misses:hover {
+  background: rgba(245, 101, 101, 0.14);
+}
+
+.zone-counter.misses:active {
+  background: rgba(245, 101, 101, 0.22);
+}
+
+.zone-counter-divider {
+  width: 1px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.counter-value {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.zone-counter.makes .counter-value {
+  color: var(--make-green);
+}
+
+.zone-counter.misses .counter-value {
+  color: var(--miss-red);
+}
+
+.counter-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.court-preview-card {}
+
+.zone-count {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.submit-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.submit-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 12px;
+  font-size: 16px;
+}
+
+@media (max-width: 700px) {
+  .form-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .form-row .form-group {
+    width: 100%;
+  }
+
+  .zones-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zone-input-card {
+    padding: 10px;
+  }
+
+  .zone-input-label {
+    font-size: 11px;
+  }
+}
+

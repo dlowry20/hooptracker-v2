@@ -1,0 +1,75 @@
+.zone-stats {
+  overflow-x: auto;
+}
+
+.stats-table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.stats-table th {
+  text-align: left;
+  padding: 8px 12px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+}
+
+.stats-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(46, 55, 64, 0.5);
+  color: var(--text-primary);
+}
+
+.stats-table tr.no-data td {
+  color: var(--text-muted);
+}
+
+.stats-table tfoot td {
+  border-top: 2px solid var(--border);
+  border-bottom: none;
+  font-weight: 600;
+}
+
+.zone-num {
+  color: var(--text-secondary);
+  font-weight: 600;
+  width: 32px;
+}
+
+.zone-label {
+  font-weight: 500;
+}
+
+.total-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.pct-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.pct-badge.good {
+  background: rgba(61, 214, 140, 0.15);
+  color: var(--make-green);
+}
+
+.pct-badge.poor {
+  background: rgba(245, 101, 101, 0.15);
+  color: var(--miss-red);
+}
