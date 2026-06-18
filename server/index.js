@@ -5,7 +5,8 @@ const cors = require('cors');
 const app = express();
 
 const allowedOrigins = [
-  process.env.CLIENT_URL,
+  // CLIENT_URL can be a single URL or a comma-separated list of URLs
+  ...(process.env.CLIENT_URL ? process.env.CLIENT_URL.split(',').map(s => s.trim()) : []),
   'http://localhost:5173',
   'http://localhost:5174',
 ].filter(Boolean);
